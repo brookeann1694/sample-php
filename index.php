@@ -23,7 +23,7 @@
             $sql = "INSERT INTO tutorials_tbl ".
                "(tutorial_title,tutorial_author,submission_date) "."VALUES ".
                "('$tutorial_title','$tutorial_author','$submission_date')";
-               mysql_select_db('TUTORIALS');
+               mysql_select_db('defaultdb');
             $retval = mysql_query( $sql, $conn );
          
             if(! $retval ) {
