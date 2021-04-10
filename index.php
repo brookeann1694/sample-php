@@ -33,7 +33,7 @@
             
             //echo "1 record added";
            
-            mysql_close($conn);       
+            mysqli_close($conn);       
             
            //header ("Location: index.php");
            header("Location: http://www.google.com");
