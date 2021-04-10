@@ -35,7 +35,9 @@
            
             mysql_close($conn);       
             
-            window.location = "http://www.google.com/"
+            header("Location: http://www.google.com");
+  
+            exit;
             
          } else {
       ?>
