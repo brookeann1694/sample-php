@@ -1,7 +1,7 @@
 <html>
 
    <head>
-      <title>Add New Record in MySQL Database</title>
+      <title>Project Submission Tracker (HTML/PHP/MYSQL)</title>
    </head>
 
    <body>
@@ -17,14 +17,14 @@
                die('Could not connect: ' . mysql_error());
             }
  
-            $tutorial_title = $_POST['tutorial_title'];
-            $tutorial_author = $_POST['tutorial_author'];
-            $submission_date = $_POST['submission_date'];
+            $project_title = $_POST['project_title'];
+            $project_author = $_POST['project_author'];
+            $project_date = $_POST['submission_date'];
             
             mysqli_select_db($conn, $dbname);
-            $sql="INSERT INTO tutorials_tbl (tutorial_title, tutorial_author, submission_date)
+            $sql="INSERT INTO project_tbl (project_title, project_author, submission_date)
             VALUES
-            ('$_POST[tutorial_title]','$_POST[tutorial_author]','$_POST[submission_date]')";
+            ('$_POST[project_title]','$_POST[project_author]','$_POST[submission_date]')";
 
             if (!mysqli_query($conn,$sql))
             {
@@ -47,16 +47,16 @@
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
             <tr>
-               <td width = "250">Tutorial Title</td>
+               <td width = "250">Project Title</td>
                <td>
-                  <input name = "tutorial_title" type = "text" id = "tutorial_title">
+                  <input name = "prpject_title" type = "text" id = "project_title">
                </td>
             </tr>
          
             <tr>
-               <td width = "250">Tutorial Author</td>
+               <td width = "250">Project Owner</td>
                <td>
-                  <input name = "tutorial_author" type = "text" id = "tutorial_author">
+                  <input name = "project_owner" type = "text" id = "project_owner">
                </td>
             </tr>
          
@@ -75,7 +75,7 @@
             <tr>
                <td width = "250"> </td>
                <td>
-                  <input name = "add" type = "submit" id = "add"  value = "Add Tutorial">
+                  <input name = "add" type = "submit" id = "add"  value = "SUBMIT">
                </td>
             </tr>
          </table>
