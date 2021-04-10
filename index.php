@@ -29,7 +29,7 @@
             mysqli_select_db($conn, $dbname);
             $sql = "INSERT INTO project_tbl (project_title, project_owner, submission_date)
             VALUES
-            ('$project_title]','$project_owner','$submission_date')";
+            ('$project_title','$project_owner','$submission_date')";
             //('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
 
           //Validate if Query completed successfully.
