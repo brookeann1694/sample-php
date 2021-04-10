@@ -20,14 +20,14 @@
             $tutorial_author = $_POST['tutorial_author'];
             $submission_date = $_POST['submission_date'];
             
-            mysql_select_db("defaultdb", $conn);
+            mysqli_select_db("defaultdb", $conn);
             $sql="INSERT INTO tutorials_tbl (tutorial_title, tutorial_author, submission_date)
             VALUES
             ('$_POST[tutorial_title]','$_POST[tutorial_author]','$_POST[submission_date]')";
 
-            if (!mysql_query($sql,$con))
+            if (!mysqli_query($sql,$con))
             {
-             die('Error: ' . mysql_error());
+             die('Error: ' . mysqli_error());
             }
             echo "1 record added";
             mysql_close($conn);         
