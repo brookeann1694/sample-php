@@ -23,14 +23,14 @@
           //Set Table POST variables
             $project_title = $_POST['project_title'];
             $project_owner = $_POST['project_owner'];
-            $project_date = $_POST['submission_date'];
+            $submission_date = $_POST['submission_date'];
             
           //Insert Data into Table from Form
             mysqli_select_db($conn, $dbname);
             $sql="INSERT INTO project_tbl (project_title, project_owner, submission_date)
             VALUES
-            ('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
-            //('$project_title]','$project_owner','$project_date')";
+            ('$project_title]','$project_owner','$submission_date')";
+            //('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
 
           //Validate if Query completed successfully.
             if (!mysqli_query($conn,$sql))
