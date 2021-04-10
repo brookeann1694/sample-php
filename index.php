@@ -31,12 +31,13 @@
              die('Error: ' . mysql_error());
             }
             
-            #echo "1 record added";
+            //echo "1 record added";
            
             mysql_close($conn);       
             
-            header("Location: http://www.google.com");
-  
+           //header ("Location: index.php");
+           header("Location: http://www.google.com");
+            
             exit;
             
          } else {
