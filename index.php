@@ -11,9 +11,9 @@
             $dbuser = 'doadmin';
             $dbpass = 'vmfgowz9s3x40idw';
             $dbname = 'defaultdb'
-            $mysqli = mysqli_connect($dbhost, $dbuser, $dbpass);
+            $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
-            if(! $mysqli ) {
+            if(! $conn ) {
                die('Could not connect: ' . mysql_error());
             }
  
@@ -21,17 +21,17 @@
             $tutorial_author = $_POST['tutorial_author'];
             $submission_date = $_POST['submission_date'];
             
-            mysqli_select_db($mysqli, $dbname);
+            mysqli_select_db($conn, $dbname);
             $sql="INSERT INTO tutorials_tbl (tutorial_title, tutorial_author, submission_date)
             VALUES
             ('$_POST[tutorial_title]','$_POST[tutorial_author]','$_POST[submission_date]')";
 
-            if (!mysqli_query($mysqli,$sql))
+            if (!mysqli_query($conn,$sql))
             {
-             die('Error: ' . mysqli_error());
+             die('Error: ' . mysql_error());
             }
             echo "1 record added";
-            mysqli_close($conn);         
+            mysql_close($conn);         
             
          } else {
       ?>
