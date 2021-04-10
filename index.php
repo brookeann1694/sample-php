@@ -18,13 +18,13 @@
             }
  
             $project_title = $_POST['project_title'];
-            $project_author = $_POST['project_author'];
+            $project_owner = $_POST['project_owner'];
             $project_date = $_POST['submission_date'];
             
             mysqli_select_db($conn, $dbname);
-            $sql="INSERT INTO project_tbl (project_title, project_author, submission_date)
+            $sql="INSERT INTO project_tbl (project_title, project_owner, submission_date)
             VALUES
-            ('$_POST[project_title]','$_POST[project_author]','$_POST[submission_date]')";
+            ('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
 
             if (!mysqli_query($conn,$sql))
             {
@@ -49,7 +49,7 @@
             <tr>
                <td width = "250">Project Title</td>
                <td>
-                  <input name = "prpject_title" type = "text" id = "project_title">
+                  <input name = "project_title" type = "text" id = "project_title">
                </td>
             </tr>
          
