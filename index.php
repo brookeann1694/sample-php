@@ -36,7 +36,8 @@
             mysqli_close($conn);       
             
            //header ("Location: index.php");
-           header("Location: https://dream-harvest-php-2-2jfb4.ondigitalocean.app/");
+           //header("Location: https://dream-harvest-php-2-2jfb4.ondigitalocean.app/");
+           header("Location: index.php");
             
             exit;
             
