@@ -20,14 +20,14 @@
                //echo "Database Connection Fialed";
             }
                         
-          //Set Table POST variables
+          //Set variables for POST data
             $project_title = $_POST['project_title'];
             $project_owner = $_POST['project_owner'];
             $submission_date = $_POST['submission_date'];
             
           //Insert Data into Table from Form
             mysqli_select_db($conn, $dbname);
-            $sql="INSERT INTO project_tbl (project_title, project_owner, submission_date)
+            $sql = "INSERT INTO project_tbl (project_title, project_owner, submission_date)
             VALUES
             ('$project_title]','$project_owner','$submission_date')";
             //('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
