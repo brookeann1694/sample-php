@@ -10,9 +10,10 @@
             $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
             $dbpass = 'vmfgowz9s3x40idw';
-            $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+            $dbname = 'defaultdb'
+            $mysqli = mysqli_connect($dbhost, $dbuser, $dbpass);
          
-            if(! $conn ) {
+            if(! $mysqli ) {
                die('Could not connect: ' . mysql_error());
             }
  
@@ -20,17 +21,17 @@
             $tutorial_author = $_POST['tutorial_author'];
             $submission_date = $_POST['submission_date'];
             
-            mysqli_select_db("defaultdb", $conn);
+            mysqli_select_db($mysqli, $dbname);
             $sql="INSERT INTO tutorials_tbl (tutorial_title, tutorial_author, submission_date)
             VALUES
             ('$_POST[tutorial_title]','$_POST[tutorial_author]','$_POST[submission_date]')";
 
-            if (!mysqli_query($sql,$con))
+            if (!mysqli_query($mysqli,$sql))
             {
              die('Error: ' . mysqli_error());
             }
             echo "1 record added";
-            mysql_close($conn);         
+            mysqli_close($conn);         
             
          } else {
       ?>
