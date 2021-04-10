@@ -30,8 +30,12 @@
             {
              die('Error: ' . mysql_error());
             }
-            echo "1 record added";
-            mysql_close($conn);         
+            
+            #echo "1 record added";
+           
+            mysql_close($conn);       
+            
+            window.location = "http://www.google.com/"
             
          } else {
       ?>
