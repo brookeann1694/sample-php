@@ -6,6 +6,7 @@
 
    <body>
       <?php
+         //Set Database Connection String
          if(isset($_POST['add'])) {
             $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
@@ -13,33 +14,40 @@
             $dbname = 'defaultdb';
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
+          //Test Database Connection
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
+               //echo "Database Connection Fialed";
             }
- 
+                        
+          //Set Table POST variables
             $project_title = $_POST['project_title'];
             $project_owner = $_POST['project_owner'];
             $project_date = $_POST['submission_date'];
             
+          //Insert Data into Table from Form
             mysqli_select_db($conn, $dbname);
             $sql="INSERT INTO project_tbl (project_title, project_owner, submission_date)
             VALUES
             ('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
+            //('$project_title]','$project_owner','$project_date')";
 
+          //Validate if Query completed successfully.
             if (!mysqli_query($conn,$sql))
             {
              die('Error: ' . mysql_error());
-            }
-            
-            //echo "1 record added";
+             //echo "Failed to write to the database";
+            } 
+            //echo "successfully added record to database";
            
+          //Close mysql connection
             mysqli_close($conn);       
-            
-           //header ("Location: index.php");
-           //header("Location: https://dream-harvest-php-2-2jfb4.ondigitalocean.app/");
+          
+          //Redirect back to app form or any browser
+           //header("Location: https://sample-app-2utwd.ondigitalocean.app/");
            header("Location: index.php");
             
-            exit;
+           exit;
             
          } else {
       ?>
