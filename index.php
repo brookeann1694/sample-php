@@ -10,7 +10,7 @@
             $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
             $dbpass = 'vmfgowz9s3x40idw';
-            $dbname = 'defaultdb'
+            $dbname = 'defaultdb';
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
             if(! $conn ) {
