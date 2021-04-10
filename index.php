@@ -10,7 +10,7 @@
             $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
             $dbpass = 'vmfgowz9s3x40idw';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
