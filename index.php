@@ -53,14 +53,15 @@
       ?>
    
       <form method = "post" action = "<?php $_PHP_SELF ?>">
-         <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
-            <tr>
-               <td width = "250">Project Title</td>
-               <td>
-                  <input name = "project_title" type = "text" id = "project_title">
-               </td>
-            </tr>
-         
+    
+         		 <div class="form-innerselect">
+		 <select name="project_title" id="project_title" required>
+           <option value="Select Name"></option>
+		    <option value="" disabled selected>Name</option>
+          <option value="Spongebob">Spongebob</option>
+          <option value="Squidward">Squidward</option>
+          <option value="Patrick">Patrick</option>
+		   </div>
             <tr>
                <td width = "250">Project Owner</td>
                <td>
