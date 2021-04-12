@@ -8,9 +8,9 @@
       <?php
          //Set Database Connection String
          if(isset($_POST['add'])) {
-            $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
+            $dbhost = 'db-mysql-sfo3-70323-do-user-8812855-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
-            $dbpass = 'vmfgowz9s3x40idw';
+            $dbpass = 'hdtvkle2drdbbajr';
             $dbname = 'defaultdb';
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
