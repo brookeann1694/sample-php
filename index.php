@@ -11,7 +11,7 @@
             $dbhost = 'db-mysql-sfo3-70323-do-user-8812855-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
             $dbpass = 'hdtvkle2drdbbajr';
-            $dbname = 'defaultdb';
+            $dbname = 'dream_harvest_yield';
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
           //Test Database Connection
