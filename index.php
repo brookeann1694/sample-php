@@ -16,8 +16,8 @@
          
           //Test Database Connection
             if(! $conn ) {
-               die('Could not connect: ' . mysql_error());
-               //echo "Database Connection Fialed";
+               //die('Could not connect: ' . mysql_error());
+               echo "Database Connection Failed";
             }
                         
           //Set variables for POST data
